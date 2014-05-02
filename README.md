@@ -14,12 +14,32 @@ Usage
 -----
 
 > ruby cuke-steps.rb \[options\] &lt;directories...&gt;
+> ruby cuke-tags.rb \[options\] &lt;directory...&gt;
+
+
+In its simplest form:
+
+> ruby cuke-tags.rb features/
+
+Supported options (cuke-tags):
+
+*  -o FILE, --output FILE  
+   Output to FILE, default "steps.html" or "steps.cf"
+
+*  -h, --help  
+   Usage instructions
+
+
+
+This will scan the provided directory for feature files (*.files) and output the json for feature info in the specified file. The json file can be used for jenkins integration.
+
+
 
 In its simplest form:
 
 > ruby cuke-steps.rb features/
 
-Supported options:
+Supported options (cuke-steps):
 
 *  -f FORMAT, --format FORMAT  
    Select output format, either "html" or "cf"
@@ -29,6 +49,8 @@ Supported options:
 
 *  -h, --help  
    Usage instructions
+
+
 
 This will scan the provided directories for step definition files (*.rb) and output the documentation in the specified file.
 
